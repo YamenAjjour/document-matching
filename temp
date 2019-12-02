@@ -1,0 +1,10 @@
+def match_arguments(arguments_map,old_arguments):
+    print(len(old_arguments))
+    for old_argument in old_arguments:
+        for argument in arguments_map:
+            print(similar(old_argument,argument))
+            if(similar(old_argument,argument)>0.8):
+                 print('%s\t%s'%(argument,old_argument),level=logging.INFO)
+
+argument_map = load_args_me()
+old_arguments = load_old_arguments()
