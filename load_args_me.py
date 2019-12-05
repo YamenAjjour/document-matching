@@ -7,6 +7,7 @@ from difflib import SequenceMatcher
 dirname = os.path.dirname(__file__)
 import logging
 import csv
+import tqdm
 
 def preprocess(conclusion):
 
@@ -74,7 +75,7 @@ def match_arguments(arguments_map,old_arguments,argument_ids_file,argument_match
     matches_file=open(argument_matches_file,'w')
 
     count_all_arguments=float(len(argument_ids_to_match))
-    for i,old_argument in enumerate(old_arguments):
+    for i,old_argument in tqdm.tqdm(enumerate(old_arguments)):
         if old_arguments[old_argument] in argument_ids_to_match:
             logging.warning("%f finished"%(i/count_all_arguments))
             for argument in arguments_map:
@@ -89,5 +90,5 @@ old_arguments = load_old_arguments()
 
 argument_map = load_args_me()
 old_arguments = load_old_arguments()
-match_arguments(argument_map,old_arguments,'not-exact-matches-3.txt','matches-3.txt')
+match_arguments(argument_map,old_arguments,'not-exact-matches-1.txt','matches-1.txt')
 #match_arguments_exact(argument_map,old_arguments,'exact-matches.txt','not-exact-machted.txt')
