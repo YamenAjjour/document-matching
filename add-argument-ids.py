@@ -2,7 +2,7 @@ import pandas as pd
 from conf.configuration import *
 
 path = get_rankings_path()
-rankings_df = pd.reas_csv(path,encoding="utf-8",sep=",")
+rankings_df = pd.read_csv(path,encoding="utf-8",sep=",")
 
 def load_matches(matches_file):
     matches_file=open(matches_file,'r')
@@ -19,7 +19,7 @@ def load_matches(matches_file):
 matches_1 = load_matches("matches-1.txt")
 matches_2 = load_matches("matches-2.txt")
 matches_3 = load_matches("matches-3.txt")
-exact_matches = load_matches("argument_exact_matches.txt")
+exact_matches = load_matches("exact-matches.txt")
 ids_map = {}
 
 
@@ -32,9 +32,15 @@ for old_arugment_id, args_id in all_matches:
     ids_map[old_arugment_id]=args_id
 
 old_argument_ids= list( rankings_df['Argument ID'])
-old_discussion_ids = list(rankings_df['Document ID'])
-for i, argument_id in old_argument_ids:
+old_discussion_ids = list(rankings_df['Discussion ID'])
+args_ids = []
+for i, argument_id in enumerate(old_argument_ids):
     discussion_id = old_discussion_ids[i]
-    id = str(int(argument_id))+" "+ discussion_id
-    args_id = ids_map[id]
-    print(args_id)
+    id = str(discussion_id) +" "+ str(int(argument_id))
+    try:
+        args_id = ids_map[id]
+        args_ids.append(args_id)
+    except Exception as error:
+        args_ids.append("None")
+rankings_df['args-id']=args_ids
+rankings_df.to_csv("rankings-rags-ids.csv",sep=",",encoding='utf-8')
