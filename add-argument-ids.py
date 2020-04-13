@@ -16,18 +16,14 @@ def load_matches(matches_file):
         old_argument_ids.append(old_argument_id)
     return zip(old_argument_ids,args_me_argument_ids)
 
-matches_1 = load_matches("matches-1.txt")
-matches_2 = load_matches("matches-2.txt")
-matches_3 = load_matches("matches-3.txt")
-exact_matches = load_matches("exact-matches.txt")
+matches_1 = load_matches("/mnt/disk1/args-me-matching/lukas-argument-best-matches.txt")
+
 ids_map = {}
 
 
 all_matches = []
 all_matches.extend(matches_1)
-all_matches.extend(matches_2)
-all_matches.extend(matches_3)
-all_matches.extend(exact_matches)
+
 for old_arugment_id, args_id in all_matches:
     ids_map[old_arugment_id]=args_id
 
@@ -36,7 +32,7 @@ old_discussion_ids = list(rankings_df['Discussion ID'])
 args_ids = []
 for i, argument_id in enumerate(old_argument_ids):
     discussion_id = old_discussion_ids[i]
-    id = str(discussion_id) +" "+ str(int(argument_id))
+    id = str(argument_id) +" "+ str(discussion_id)
     try:
         args_id = ids_map[id]
         args_ids.append(args_id)
