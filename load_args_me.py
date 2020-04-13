@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 import json
-from conf.configuration import *
+
 import re
 from difflib import SequenceMatcher
 dirname = os.path.dirname(__file__)
