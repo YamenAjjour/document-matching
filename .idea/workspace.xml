@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86f7be83-7238-4f81-aa3a-9a7d2ad3a449" name="Default Changelist" comment="adding cluster code">
+    <list default="true" id="86f7be83-7238-4f81-aa3a-9a7d2ad3a449" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generate_args_me.py" beforeDir="false" afterPath="$PROJECT_DIR$/generate_args_me.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +40,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576000420187" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
@@ -207,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587289015651</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="adding cluster code">
+      <created>1587289557394</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1587289557394</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -223,10 +232,10 @@
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="667" y="196" width="642" height="832" key="#preprocess_args_me/67.27.1853.1173@67.27.1853.1173" timestamp="1587039267032" />
-    <state x="593" y="189" width="791" height="847" key="CommitChangelistDialog2" timestamp="1587289538211">
+    <state x="593" y="189" width="791" height="847" key="CommitChangelistDialog2" timestamp="1587289557357">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
-    <state x="593" y="189" width="791" height="847" key="CommitChangelistDialog2/67.27.1853.1173@67.27.1853.1173" timestamp="1587289538211" />
+    <state x="593" y="189" width="791" height="847" key="CommitChangelistDialog2/67.27.1853.1173@67.27.1853.1173" timestamp="1587289557357" />
     <state width="1807" height="318" key="GridCell.Tab.0.bottom" timestamp="1587125304529">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
@@ -263,14 +272,14 @@
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="579" y="311" width="819" height="602" key="NewModule_or_Project.wizard/67.27.1853.1173@67.27.1853.1173" timestamp="1587033293587" />
-    <state x="476" y="190" width="1024" height="845" key="SettingsEditor" timestamp="1587039258456">
+    <state x="476" y="190" width="1024" height="845" key="SettingsEditor" timestamp="1587289930535">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
-    <state x="476" y="190" width="1024" height="845" key="SettingsEditor/67.27.1853.1173@67.27.1853.1173" timestamp="1587039258456" />
-    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1587289551948">
+    <state x="476" y="190" width="1024" height="845" key="SettingsEditor/67.27.1853.1173@67.27.1853.1173" timestamp="1587289930535" />
+    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1587289560183">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
-    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1587289551948" />
+    <state x="588" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1587289560183" />
     <state x="649" y="440" key="com.intellij.ide.util.TipDialog" timestamp="1587033039370">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
@@ -311,7 +320,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/generate_args_me.py</url>
-          <line>3</line>
+          <line>5</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
