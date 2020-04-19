@@ -1,7 +1,7 @@
 from conf.configuration import *
 import json
 import logging
-logging.buildConfigu(filename="generate-args-me.log",level=logging.DEBUG)
+logging.buildConfig(filename="logs/generate-args-me.log",level=logging.DEBUG)
 import os
 path_source_args_me=get_source_path("args-me")
 print(path_source_args_me)
