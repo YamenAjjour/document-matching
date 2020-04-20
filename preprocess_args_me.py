@@ -28,7 +28,8 @@ def preprocess():
     dataset_preprocessed_path =get_preprocessed_path('args-me')
     document_ids=[]
     argument_ids=[]
-    texts=[]
+    conclusions=[]
+    premises=[]
     topics=[]
 
     with open(dataset_source_path) as json_file:
@@ -38,10 +39,10 @@ def preprocess():
             debate_id,argument_id,conclusion,premise,topic = entry2argument(entry)
             document_ids.append(debate_id)
             argument_ids.append(argument_id)
-            text = conclusion +" "+ premise
-            texts.append(text)
+            premises.append(premise)
+            conclusions.append(conclusion)
             topics.append(topic)
-        preprocessed_data_frame= pd.DataFrame({"argument":texts,"topic":topics,"argument-id":argument_ids,"document-id":document_ids,"topic":topics})
+        preprocessed_data_frame= pd.DataFrame({"conclusion":conclusions,"premise":premises,"argument-id":argument_ids,"document-id":document_ids})
         preprocessed_data_frame.to_csv(dataset_preprocessed_path,quotechar='"',sep="|",quoting=csv.QUOTE_ALL,encoding="utf-8",index=False)
     print("finished preprocessing")
 
