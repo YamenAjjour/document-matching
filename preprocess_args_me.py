@@ -25,7 +25,7 @@ def entry2argument(entry):
 def preprocess():
 
     dataset_source_path = get_source_path('args-me')
-    dataset_preprocessed_path =get_preprocessed_path'args-me')
+    dataset_preprocessed_path =get_preprocessed_path('args-me')
     document_ids=[]
     argument_ids=[]
     texts=[]
