@@ -42,7 +42,7 @@ def preprocess():
             premises.append(premise)
             conclusions.append(conclusion)
             topics.append(topic)
-        preprocessed_data_frame= pd.DataFrame({"conclusion":conclusions,"premise":premises,"argument-id":argument_ids,"document-id":document_ids})
+        preprocessed_data_frame= pd.DataFrame({"conclusion":conclusions,"premise":premises,"argument_id":argument_ids,"document-id":document_ids})
         preprocessed_data_frame.to_csv(dataset_preprocessed_path,quotechar='"',sep="|",quoting=csv.QUOTE_ALL,encoding="utf-8",index=False)
     print("finished preprocessing")
 
