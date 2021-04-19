@@ -2,15 +2,9 @@ import os
 source_label ="source"
 sample_label ="sample"
 preprocessed = "preprocessed"
-average_statistics_label="average_statistics"
-old_arguments_label="old_arguments"
-rankings_label="rankings"
-histogram_label="histogram_%s_%s"
-histogram_fig_label="histogram_fig_%s_%s"
-top_ten_conclusion_label="top_ten_conclusions"
-top_ten_conclusion_translated_label="top_ten_conclusions_russian"
-top_ten_topic_label="top_ten_topics"
-
+duplicated_template="duplicated-%s"
+duplicates_template="duplicates-%s"
+cleaned_template="cleaned-%s"
 dirname = os.path.dirname(__file__)
 
 
@@ -48,6 +42,23 @@ def get_preprocessed_path(dataset_name):
     dataset_preprocessed_path = get_property_value(dataset_conf_path,preprocessed)
     return dataset_preprocessed_path
 
+def get_duplicated_path(dataset_name, match_variable):
+    dataset_conf_path = get_dataset_conf_path(dataset_name)
+    duplicated= duplicated_template % match_variable
+    duplicated_path = get_property_value(dataset_conf_path,duplicated)
+    return duplicated_path
+
+def get_duplicates_path(dataset_name, match_variable):
+    dataset_conf_path = get_dataset_conf_path(dataset_name)
+    duplicates= duplicates_template % match_variable
+    duplicates_path = get_property_value(dataset_conf_path,duplicates)
+    return duplicates_path
+
+def get_cleaned_path(dataset_name, match_variable):
+    dataset_conf_path = get_dataset_conf_path(dataset_name)
+    cleaned= cleaned_template % match_variable
+    cleaned_path=get_property_value(dataset_conf_path,cleaned)
+    return cleaned_path
 
 def get_property_value(dataset_conf_path,property_label):
     conf_file = open(dataset_conf_path,'r')

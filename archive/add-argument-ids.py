@@ -1,7 +1,7 @@
 import pandas as pd
 from conf.configuration import *
 
-path = get_rankings_path()
+path = get_old_arguments_path()
 rankings_df = pd.read_csv(path,encoding="utf-8",sep=",")
 
 def load_matches(matches_file):
@@ -16,7 +16,7 @@ def load_matches(matches_file):
         old_argument_ids.append(old_argument_id)
     return zip(old_argument_ids,args_me_argument_ids)
 
-matches_1 = load_matches("/mnt/disk1/args-me-matching/lukas-argument-best-matches.txt")
+matches_1 = load_matches("/mnt/ceph/storage/data-in-progress/args-me-document-matching/2020-4-21/lukas-best-argument-matches.txt")
 
 ids_map = {}
 
@@ -39,4 +39,4 @@ for i, argument_id in enumerate(old_argument_ids):
     except Exception as error:
         args_ids.append("None")
 rankings_df['args-id']=args_ids
-rankings_df.to_csv("rankings-rags-ids.csv",sep=",",encoding='utf-8')
+rankings_df.to_csv("/mnt/ceph/storage/data-in-progress/args-me-document-matching/2020-4-21/arguments-with-new-ids.csv",sep=",",encoding='utf-8')

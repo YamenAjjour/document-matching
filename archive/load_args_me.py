@@ -90,5 +90,5 @@ old_arguments = load_old_arguments()
 
 argument_map = load_args_me()
 old_arguments = load_old_arguments()
-match_arguments(argument_map,old_arguments,'not-exact-matches-1.txt','matches-1.txt')
+match_arguments(argument_map, old_arguments, 'not-exact-matches-1.txt', 'matches-1.txt')
 #match_arguments_exact(argument_map,old_arguments,'exact-matches.txt','not-exact-machted.txt')

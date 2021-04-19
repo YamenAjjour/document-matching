@@ -1,0 +1,71 @@
+import simplejson
+
+import pandas as pd
+
+from conf.configuration import *
+import tqdm
+import csv
+import os
+from mylogging.mylogging import *
+from collections import namedtuple
+import hashlib
+import ijson
+
+import re
+def clean(text):
+    text = re.sub(r"https?://(?:[-\w.]|(?:%[\da-fA-F]{2}))+", " ", text)
+    tokens= re.findall(r"\w+",text)
+    return " ".join(tokens)
+
+def entry2argument(entry):
+
+    conclusion = entry['conclusion'].lower().replace("\t"," ")
+    premise = entry['premises'][0]['text'].lower().replace("\t"," ")
+    argument_id = entry['id']
+    Argument = namedtuple('Argument', 'id conclusion premise hash')
+    argument_text = conclusion + " " + premise
+    argument_text = clean(argument_text)
+    hash = hashlib.md5((argument_text).encode()).hexdigest()
+    return Argument(argument_id,conclusion,premise,hash)
+
+
+def preprocess_source():
+    path_source = get_source_path('args-me')
+    path_preprocessed =get_preprocessed_path('args-me')
+    preprocess(path_source,path_preprocessed,save_duplicate_ids=True,save_duplicate_hash=False)
+
+def preprocess_cleaned_id():
+    path_cleaned=get_cleaned_path('args-me','id')
+    path_preprocessed_cleaned=get_cleaned_path('args-me','id-preprocessed')
+    preprocess(path_cleaned,path_preprocessed_cleaned,save_duplicate_ids=False, save_duplicate_hash=True)
+
+def preprocess(path_source,path_preprocessed,save_duplicate_ids,save_duplicate_hash):
+    path_duplicated_ids= get_duplicated_path('args-me','id')
+    path_duplicated_hash= get_duplicated_path('args-me','hash')
+    all_parsed_arguments=[]
+    for file in os.listdir(path_source):
+        #todo remove following line
+        if file.endswith("json"):
+            path_dataset= os.path.join(path_source,file)
+            log_message(path_dataset)
+            with open(path_dataset,encoding='utf-8') as json_file:
+                arguments= ijson.items(json_file,'arguments.item')
+                parsed_arguments= [entry2argument(argument) for argument in arguments]
+                all_parsed_arguments.extend(parsed_arguments)
+    preprocessed_data_frame= pd.DataFrame({"conclusion":[parsed_argument.conclusion for parsed_argument in all_parsed_arguments],
+                                                   "premise":[parsed_argument.premise for parsed_argument in all_parsed_arguments],
+                                                   "id":[parsed_argument.id for parsed_argument in all_parsed_arguments],
+                                                    "hash":[parsed_argument.hash for parsed_argument in all_parsed_arguments]
+                                           })
+    preprocessed_data_frame[['id','hash']]
+    duplicated_ids=preprocessed_data_frame[preprocessed_data_frame.duplicated('id')]
+    duplicated_hash=preprocessed_data_frame[preprocessed_data_frame.duplicated('hash')]
+    if save_duplicate_ids:
+        duplicated_ids.to_csv(path_duplicated_ids,sep="\t",index=False)
+    if save_duplicate_hash:
+        duplicated_hash.to_csv(path_duplicated_hash,sep="\t",index=False)
+    preprocessed_data_frame.to_csv(path_preprocessed,quotechar='"',sep="\t",quoting=csv.QUOTE_ALL,encoding="utf-8",index=False
+                                           ,columns=['id','hash','conclusion','premise'])
+
+
+#preprocess()

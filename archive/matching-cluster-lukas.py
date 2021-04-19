@@ -7,7 +7,7 @@ from pyspark.sql.types import StructField, StructType, StringType, LongType
 from pyspark.sql.functions import levenshtein
 spark = SparkSession.builder.appName('args-argument-matching').config('master','yarn').getOrCreate()
 old_arguments_df = spark.read.format("csv").option("header", "true").option("delimiter", ",").load("/user/befi8957/lukas-arguments.csv").na.drop()
-args_me_arguments_df  = spark.read.format("csv").option("header", "true").option("delimiter", "|", ).option('quote', '"').load("/user/befi8957/args-me.csv").na.drop()
+args_me_arguments_df  = spark.read.format("csv").option("header", "true").option("delimiter", "\t", ).option('quote', '"').load("/user/befi8957/args-me.csv").na.drop()
 from difflib import SequenceMatcher
 
 def preprocess(text):
@@ -47,7 +47,7 @@ def find_match(argument):
     return (id,argument[0],best_similarity)
 
 argument_pairs = args_me_arguments.repartition(200).map(lambda argument:find_match(argument))
-argument_pairs.saveAsTextFile('/user/befi8957/lukas-argument-matches.txt')
+argument_pairs.saveAsPickleFile('/user/befi8957/lukas-argument-matches.pkl')
 #exist.show()
 #for premise in premises:
 #    print(premise)
