@@ -1,0 +1,5 @@
+WARNING:root:loading up /mnt/ceph/storage/data-in-progress/args-me/2020-04-11/debateorg.json
+WARNING:root:loading up /mnt/ceph/storage/data-in-progress/args-me/2020-04-11/debatepedia.json
+WARNING:root:loading up /mnt/ceph/storage/data-in-progress/args-me/2020-04-11/debatewise.json
+WARNING:root:loading up /mnt/ceph/storage/data-in-progress/args-me/2020-04-11/idebate.json
+WARNING:root:writing /mnt/disk1/corpora/args-matching-corpora/args-me/args-me.json

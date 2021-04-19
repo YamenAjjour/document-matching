@@ -1,51 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86f7be83-7238-4f81-aa3a-9a7d2ad3a449" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/archive/conf/args-me.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archive/preprocess_machtes_cluster.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mylogging/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mylogging/mylogging.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/duplicates/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/duplicates/duplicates.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/preprocessing/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/preprocessing/preprocess_args_me.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/runs/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/runs/run_clean_ids.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/runs/run_preprocess_args_me.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/runs/run_print_arguments.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/runs/save_duplicates.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/add-argument-ids.py" beforeDir="false" afterPath="$PROJECT_DIR$/archive/add-argument-ids.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/args-me-matching.iml" beforeDir="false" afterPath="$PROJECT_DIR$/archive/args-me-matching.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/argument-exact-matches.txt" beforeDir="false" afterPath="$PROJECT_DIR$/archive/argument-exact-matches.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/argument-matches-1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/archive/argument-matches-1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/argument-matches-2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/archive/argument-matches-2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/argument-matches-3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/archive/argument-matches-3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/args-me.conf" beforeDir="false" afterPath="$PROJECT_DIR$/conf/args-me.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/conf/configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exact-matches.txt" beforeDir="false" afterPath="$PROJECT_DIR$/archive/exact-matches.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generate_args_me.py" beforeDir="false" afterPath="$PROJECT_DIR$/archive/generate_args_me.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/load_args_me.py" beforeDir="false" afterPath="$PROJECT_DIR$/archive/load_args_me.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matches-1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/archive/matches-1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matches-2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/archive/matches-2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matches-3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/archive/matches-3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matches.txt" beforeDir="false" afterPath="$PROJECT_DIR$/archive/matches.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matching-cluster-lukas.py" beforeDir="false" afterPath="$PROJECT_DIR$/archive/matching-cluster-lukas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matching-cluster.py" beforeDir="false" afterPath="$PROJECT_DIR$/archive/matching-cluster.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mathces.txt" beforeDir="false" afterPath="$PROJECT_DIR$/archive/mathces.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/not-exact-machted.txt" beforeDir="false" afterPath="$PROJECT_DIR$/archive/not-exact-machted.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/not-exact-matches-1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/archive/not-exact-matches-1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/not-exact-matches-2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/archive/not-exact-matches-2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/not-exact-matches-3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/archive/not-exact-matches-3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocess_args_me.py" beforeDir="false" afterPath="$PROJECT_DIR$/archive/preprocess_args_me.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocess_machtes_cluster.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/produce_all_matches.py" beforeDir="false" afterPath="$PROJECT_DIR$/archive/produce_all_matches.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rankings-rags-ids.csv" beforeDir="false" afterPath="$PROJECT_DIR$/archive/rankings-rags-ids.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search_and_save_matches.py" beforeDir="false" afterPath="$PROJECT_DIR$/archive/search_and_save_matches.py" afterDir="false" />
-    </list>
+    <list default="true" id="86f7be83-7238-4f81-aa3a-9a7d2ad3a449" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -378,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587398945968</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="adding cluster code">
+      <created>1618848966124</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1618848966124</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
