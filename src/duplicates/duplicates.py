@@ -88,6 +88,7 @@ def drop_duplicates(match_variable):
                     data['arguments']=cleaned_arguments
                     simplejson.dump(data,json_file_cleaned)
             log_message(f"{count_arguments_dropped} drooped and {count_arguments_kept} kept")
+
 def save_arguments(ids):
     path_source = get_source_path('args-me')
     for file in os.listdir(path_source):

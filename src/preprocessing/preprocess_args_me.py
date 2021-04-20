@@ -22,11 +22,15 @@ def entry2argument(entry):
     conclusion = entry['conclusion'].lower().replace("\t"," ")
     premise = entry['premises'][0]['text'].lower().replace("\t"," ")
     argument_id = entry['id']
-    Argument = namedtuple('Argument', 'id conclusion premise hash')
+    Argument = namedtuple('Argument', 'id conclusion premise hash url')
     argument_text = conclusion + " " + premise
     argument_text = clean(argument_text)
+    if 'sourceUrl' in entry['context']:
+        url = entry['context']['sourceUrl']
+    else:
+        url=None
     hash = hashlib.md5((argument_text).encode()).hexdigest()
-    return Argument(argument_id,conclusion,premise,hash)
+    return Argument(argument_id,conclusion,premise,hash,url)
 
 
 def preprocess_source():
@@ -38,6 +42,10 @@ def preprocess_cleaned_id():
     path_cleaned=get_cleaned_path('args-me','id')
     path_preprocessed_cleaned=get_cleaned_path('args-me','id-preprocessed')
     preprocess(path_cleaned,path_preprocessed_cleaned,save_duplicate_ids=False, save_duplicate_hash=True)
+
+def prepprocess_cleaned_hash():
+    path_cleaned=get_cleaned_path('args-me','hash')
+    path_preprocessed_cleaned=get_cleaned_path('args-me','hash-preprocessed')
 
 def preprocess(path_source,path_preprocessed,save_duplicate_ids,save_duplicate_hash):
     path_duplicated_ids= get_duplicated_path('args-me','id')
@@ -55,11 +63,12 @@ def preprocess(path_source,path_preprocessed,save_duplicate_ids,save_duplicate_h
     preprocessed_data_frame= pd.DataFrame({"conclusion":[parsed_argument.conclusion for parsed_argument in all_parsed_arguments],
                                                    "premise":[parsed_argument.premise for parsed_argument in all_parsed_arguments],
                                                    "id":[parsed_argument.id for parsed_argument in all_parsed_arguments],
-                                                    "hash":[parsed_argument.hash for parsed_argument in all_parsed_arguments]
+                                                    "hash":[parsed_argument.hash for parsed_argument in all_parsed_arguments],
+                                                    "url":[parsed_argument.url for parsed_argument in all_parsed_arguments]
                                            })
     preprocessed_data_frame[['id','hash']]
     duplicated_ids=preprocessed_data_frame[preprocessed_data_frame.duplicated('id')]
-    duplicated_hash=preprocessed_data_frame[preprocessed_data_frame.duplicated('hash')]
+    duplicated_hash=preprocessed_data_frame[preprocessed_data_frame.duplicated('hash',keep=False)]
     if save_duplicate_ids:
         duplicated_ids.to_csv(path_duplicated_ids,sep="\t",index=False)
     if save_duplicate_hash:
@@ -68,4 +77,4 @@ def preprocess(path_source,path_preprocessed,save_duplicate_ids,save_duplicate_h
                                            ,columns=['id','hash','conclusion','premise'])
 
 
-#preprocess()
+preprocess_source()

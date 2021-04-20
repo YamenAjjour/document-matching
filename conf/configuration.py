@@ -3,7 +3,6 @@ source_label ="source"
 sample_label ="sample"
 preprocessed = "preprocessed"
 duplicated_template="duplicated-%s"
-duplicates_template="duplicates-%s"
 cleaned_template="cleaned-%s"
 dirname = os.path.dirname(__file__)
 
@@ -47,12 +46,6 @@ def get_duplicated_path(dataset_name, match_variable):
     duplicated= duplicated_template % match_variable
     duplicated_path = get_property_value(dataset_conf_path,duplicated)
     return duplicated_path
-
-def get_duplicates_path(dataset_name, match_variable):
-    dataset_conf_path = get_dataset_conf_path(dataset_name)
-    duplicates= duplicates_template % match_variable
-    duplicates_path = get_property_value(dataset_conf_path,duplicates)
-    return duplicates_path
 
 def get_cleaned_path(dataset_name, match_variable):
     dataset_conf_path = get_dataset_conf_path(dataset_name)

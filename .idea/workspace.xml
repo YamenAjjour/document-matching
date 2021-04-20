@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86f7be83-7238-4f81-aa3a-9a7d2ad3a449" name="Default Changelist" comment="" />
+    <list default="true" id="86f7be83-7238-4f81-aa3a-9a7d2ad3a449" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/deploy/clean_args_me.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/runs/run_clean_hash.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/args-me.conf" beforeDir="false" afterPath="$PROJECT_DIR$/conf/args-me.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/conf/configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/drop-duplicates-ids-text.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/drop-duplicates-ids-text.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/duplicates/duplicates.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/duplicates/duplicates.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/preprocessing/preprocess_args_me.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/preprocessing/preprocess_args_me.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runs/run_clean_ids.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/runs/run_clean_ids.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runs/run_preprocess_args_me.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/runs/run_preprocess_args_me.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -108,8 +120,8 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.run_clean_ids">
-    <configuration name="add-argument-ids" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.run_clean_hash">
+    <configuration name="preprocess_args_me (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="args-me-matching" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -117,32 +129,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/preprocessing" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/archive/add-argument-ids.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="preprocess_args_me" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="args-me-matching" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="/usr/bin/python3.6" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/archive/preprocess_args_me.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/preprocessing/preprocess_args_me.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -185,6 +176,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/preprocess_args_me.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run_clean_hash" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="args-me-matching" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/runs" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/runs/run_clean_hash.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -257,19 +269,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.preprocess_args_me" />
-      <item itemvalue="Python.add-argument-ids" />
       <item itemvalue="Python.run_clean_ids" />
       <item itemvalue="Python.save_duplicates" />
       <item itemvalue="Python.run_print_arguments" />
+      <item itemvalue="Python.preprocess_args_me (1)" />
+      <item itemvalue="Python.run_clean_hash" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.run_clean_hash" />
         <item itemvalue="Python.run_clean_ids" />
+        <item itemvalue="Python.preprocess_args_me (1)" />
         <item itemvalue="Python.run_print_arguments" />
         <item itemvalue="Python.save_duplicates" />
-        <item itemvalue="Python.preprocess_args_me" />
-        <item itemvalue="Python.add-argument-ids" />
       </list>
     </recent_temporary>
   </component>
@@ -427,6 +439,11 @@
           <url>file://$PROJECT_DIR$/src/duplicates/duplicates.py</url>
           <line>56</line>
           <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/preprocessing/preprocess_args_me.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
