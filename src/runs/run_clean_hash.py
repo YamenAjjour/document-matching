@@ -3,5 +3,5 @@ from duplicates.duplicates import drop_duplicates
 from mylogging.mylogging import *
 setup_logging("../../logs/drop-duplicates-hash.log")
 
-drop_duplicates('hash')
+drop_duplicates('hash',False)
 prepprocess_cleaned_hash()
