@@ -10,7 +10,7 @@ from mylogging.mylogging import *
 from collections import namedtuple
 import hashlib
 import ijson
-
+dataset='args-me-local'
 import re
 def clean(text):
     text = re.sub(r"https?://(?:[-\w.]|(?:%[\da-fA-F]{2}))+", " ", text)
@@ -34,22 +34,23 @@ def entry2argument(entry):
 
 
 def preprocess_source():
-    path_source = get_source_path('args-me')
-    path_preprocessed =get_preprocessed_path('args-me')
+    path_source = get_source_path(dataset)
+    path_preprocessed =get_preprocessed_path(dataset)
     preprocess(path_source,path_preprocessed,save_duplicate_ids=True,save_duplicate_hash=False)
 
 def preprocess_cleaned_id():
-    path_cleaned=get_cleaned_path('args-me','id')
-    path_preprocessed_cleaned=get_cleaned_path('args-me','id-preprocessed')
+    path_cleaned=get_cleaned_path(dataset,'id')
+    path_preprocessed_cleaned=get_cleaned_path(dataset,'id-preprocessed')
     preprocess(path_cleaned,path_preprocessed_cleaned,save_duplicate_ids=False, save_duplicate_hash=True)
 
 def prepprocess_cleaned_hash():
-    path_cleaned=get_cleaned_path('args-me','hash')
-    path_preprocessed_cleaned=get_cleaned_path('args-me','hash-preprocessed')
+    path_cleaned=get_cleaned_path(dataset,'hash')
+    path_preprocessed_cleaned=get_cleaned_path(dataset,'hash-preprocessed')
+    preprocess(path_cleaned,path_preprocessed_cleaned,save_duplicate_hash=False,save_duplicate_ids=False)
 
 def preprocess(path_source,path_preprocessed,save_duplicate_ids,save_duplicate_hash):
-    path_duplicated_ids= get_duplicated_path('args-me','id')
-    path_duplicated_hash= get_duplicated_path('args-me','hash')
+    path_duplicated_ids= get_duplicated_path(dataset,'id')
+    path_duplicated_hash= get_duplicated_path(dataset,'hash')
     all_parsed_arguments=[]
     for file in os.listdir(path_source):
         #todo remove following line
@@ -77,4 +78,3 @@ def preprocess(path_source,path_preprocessed,save_duplicate_ids,save_duplicate_h
                                            ,columns=['id','hash','conclusion','premise'])
 
 
-preprocess_source()

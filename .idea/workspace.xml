@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86f7be83-7238-4f81-aa3a-9a7d2ad3a449" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/conf/args-me-local.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/duplicates/duplicates.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/duplicates/duplicates.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/preprocessing/preprocess_args_me.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/preprocessing/preprocess_args_me.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/runs/run_clean_hash.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/runs/run_clean_hash.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runs/run_clean_ids.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/runs/run_clean_ids.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,17 +95,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576000420187" />
     <property name="jdk.selected.JAVA_MODULE" value="15" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/conf" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/conf" />
       <recent name="$PROJECT_DIR$/mylogging" />
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/conf" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -353,7 +356,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618907404224</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="documenting project">
+      <created>1618933228638</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1618933228638</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -443,8 +453,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/preprocessing/preprocess_args_me.py</url>
-          <line>15</line>
-          <option name="timeStamp" value="29" />
+          <line>46</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

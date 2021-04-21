@@ -8,14 +8,16 @@ import hashlib
 import os
 import random
 #import matplotlib
+
+dataset='args-me-local'
 def argument_id_exists(argument, argument_ids_to_drop):
     argument_id_exists = entry2argument(argument).id in argument_ids_to_drop
     return argument_id_exists
 
 def save_duplicates_hash(match_variable):
 
-    path_preprocessed =get_preprocessed_path('args-me')
-    path_duplicated=get_duplicated_path('args-me',match_variable)
+    path_preprocessed =get_preprocessed_path(dataset)
+    path_duplicated=get_duplicated_path(dataset,match_variable)
 
     df_duplicated = pd.read_csv(path_duplicated,sep='\t')
     df_duplicated = df_duplicated[['id']]
@@ -42,11 +44,11 @@ def get_duplicate_arguments_are_not_identical(duplicated_arguments):
 def hash_str(str):
     return hashlib.md5(str.encode()).hexdigest()
 
-def drop_duplicates(match_variable,log_arguments_text=False):
+def drop_duplicates(path_source,match_variable,log_arguments_text=False):
 
-    path_source = get_source_path('args-me')
-    path_duplicated=get_duplicated_path('args-me',match_variable)
-    path_cleaned=get_cleaned_path('args-me',match_variable)
+
+    path_duplicated=get_duplicated_path(dataset,match_variable)
+    path_cleaned=get_cleaned_path(dataset,match_variable)
     df_duplicated = pd.read_csv(path_duplicated,sep='\t')
     argument_ids_to_drop = df_duplicated['id'].values
     count_arguments_dropped=0
@@ -92,7 +94,7 @@ def drop_duplicates(match_variable,log_arguments_text=False):
             log_message(f"{count_arguments_dropped} drooped and {count_arguments_kept} kept")
 
 def save_arguments(ids):
-    path_source = get_source_path('args-me')
+    path_source = get_source_path(dataset)
     for file in os.listdir(path_source):
         if  file.endswith("json"):
             path_dataset= os.path.join(path_source,file)
