@@ -46,7 +46,7 @@ def preprocess_cleaned_id():
 def prepprocess_cleaned_hash():
     path_cleaned=get_cleaned_path(dataset,'hash')
     path_preprocessed_cleaned=get_cleaned_path(dataset,'hash-preprocessed')
-    preprocess(path_cleaned,path_preprocessed_cleaned,save_duplicate_hash=False,save_duplicate_ids=False)
+    preprocess(path_cleaned,path_preprocessed_cleaned,save_duplicate_ids=False, save_duplicate_hash=False)
 
 def preprocess(path_source,path_preprocessed,save_duplicate_ids,save_duplicate_hash):
     path_duplicated_ids= get_duplicated_path(dataset,'id')
@@ -69,7 +69,7 @@ def preprocess(path_source,path_preprocessed,save_duplicate_ids,save_duplicate_h
                                            })
     preprocessed_data_frame[['id','hash']]
     duplicated_ids=preprocessed_data_frame[preprocessed_data_frame.duplicated('id')]
-    duplicated_hash=preprocessed_data_frame[preprocessed_data_frame.duplicated('hash',keep=False)]
+    duplicated_hash=preprocessed_data_frame[preprocessed_data_frame.duplicated('hash')]
     if save_duplicate_ids:
         duplicated_ids.to_csv(path_duplicated_ids,sep="\t",index=False)
     if save_duplicate_hash:

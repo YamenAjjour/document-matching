@@ -44,6 +44,16 @@ def get_duplicate_arguments_are_not_identical(duplicated_arguments):
 def hash_str(str):
     return hashlib.md5(str.encode()).hexdigest()
 
+
+def log_kept(argument_id, argument,log_argument_text):
+    log_message(f"keeping {argument_id}")
+    if log_argument_text:
+        log_message(simplejson.dumps(argument,indent=4,sort_keys=True))
+
+def log_dropped(argument_id,argument, log_argument_text):
+    log_message(f"dropping {argument_id}")
+    if log_argument_text:
+        log_message(simplejson.dumps(argument,indent=4,sort_keys=True))
 def drop_duplicates(path_source,match_variable,log_arguments_text=False):
 
 
@@ -64,27 +74,21 @@ def drop_duplicates(path_source,match_variable,log_arguments_text=False):
                 cleaned_arguments=[]
                 duplicated_arguments=[]
                 for argument in arguments:
-                    if argument_id_exists(argument,argument_ids_to_drop):
+                    if not argument_id_exists(argument,argument_ids_to_drop):
+                        cleaned_arguments.append(argument)
+                    else:
                         parsed_argument= entry2argument(argument)
                         argument_id = parsed_argument.id
-                        if argument_id in kept_argument_ids:
-                            log_message(f"dropping {argument_id}")
+                        if match_variable!='id' or argument_id in kept_argument_ids:
                             count_arguments_dropped=count_arguments_dropped+1
-                            if log_arguments_text:
-                                log_message(simplejson.dumps(argument,indent=4,sort_keys=True))
-                            duplicated_arguments.append((argument_id,argument))
-                            continue
+                            log_dropped(argument_id,argument,log_arguments_text)
                         else:
-                            log_message(f"keeping {argument_id}")
+                            log_kept(argument_id,argument,log_arguments_text)
                             count_arguments_kept=count_arguments_kept+1
-                            if log_arguments_text:
-                                log_message(simplejson.dumps(argument,indent=4,sort_keys=True))
+                            cleaned_arguments.append(argument)
                             kept_argument_ids.add(argument_id)
-                    cleaned_arguments.append(argument)
 
-                if len(duplicated_arguments)>0:
-                    ids=get_duplicate_arguments_are_not_identical(duplicated_arguments)
-                    print(list(set(ids)))
+
                 path_cleaned_dataset=os.path.join(path_cleaned,file)
                 log_message(path_cleaned_dataset)
                 with open(path_cleaned_dataset,'w') as json_file_cleaned:
