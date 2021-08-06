@@ -1,6 +1,6 @@
 import pandas as pd
 import json
-from conf.configuration import *
+from src.conf.configuration import *
 import tqdm
 import csv
 

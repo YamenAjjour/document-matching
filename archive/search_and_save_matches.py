@@ -1,5 +1,4 @@
-import os
-from conf.configuration import *
+from src.conf.configuration import *
 import pandas as pd
 import csv
 def load_args_me():

@@ -1,8 +1,7 @@
-from conf.configuration import *
+from src.conf.configuration import *
 import json
 import logging
 logging.basicConfig(filename="../logs/generate-args-me.log", level=logging.DEBUG)
-import os
 path_source_args_me=get_source_path("args-me")
 print(path_source_args_me)
 root_path="/mnt/ceph/storage/data-in-progress/args-me/2020-04-11/"

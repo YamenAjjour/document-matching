@@ -1,5 +1,5 @@
 import pandas as pd
-from conf.configuration import *
+from src.conf.configuration import *
 
 path = get_old_arguments_path()
 rankings_df = pd.read_csv(path,encoding="utf-8",sep=",")

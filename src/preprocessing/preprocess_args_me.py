@@ -3,11 +3,10 @@ import simplejson
 import pandas as pd
 
 from conf.configuration import *
-import tqdm
 import csv
 import os
 from mylogging.mylogging import *
-from collections import namedtuple
+from collections import namedtuple, defaultdict
 import hashlib
 import ijson
 dataset='args-me-local'
@@ -48,6 +47,20 @@ def prepprocess_cleaned_hash():
     path_preprocessed_cleaned=get_cleaned_path(dataset,'hash-preprocessed')
     preprocess(path_cleaned,path_preprocessed_cleaned,save_duplicate_ids=False, save_duplicate_hash=False)
 
+
+
+
+def generate_duplicated_hash_grouped(preprocessed_data_frame):
+    duplicated_hash=preprocessed_data_frame[preprocessed_data_frame.duplicated('hash',keep=False)]
+    duplicated_hash_groups=defaultdict(list)
+    for hash, arguments_by_hash in duplicated_hash.groupby('hash'):
+        for index,argument in arguments_by_hash.iterrows():
+            id = argument['id']
+            duplicated_hash_groups[hash].append(id)
+    path_duplicated_hash= get_duplicated_path(dataset,'hash-grouped')
+    with open(path_duplicated_hash,'w') as outfile:
+        simplejson.dump(duplicated_hash_groups,outfile)
+
 def preprocess(path_source,path_preprocessed,save_duplicate_ids,save_duplicate_hash):
     path_duplicated_ids= get_duplicated_path(dataset,'id')
     path_duplicated_hash= get_duplicated_path(dataset,'hash')
@@ -69,7 +82,9 @@ def preprocess(path_source,path_preprocessed,save_duplicate_ids,save_duplicate_h
                                            })
     preprocessed_data_frame[['id','hash']]
     duplicated_ids=preprocessed_data_frame[preprocessed_data_frame.duplicated('id')]
+    generate_duplicated_hash_grouped(preprocessed_data_frame)
     duplicated_hash=preprocessed_data_frame[preprocessed_data_frame.duplicated('hash')]
+
     if save_duplicate_ids:
         duplicated_ids.to_csv(path_duplicated_ids,sep="\t",index=False)
     if save_duplicate_hash:

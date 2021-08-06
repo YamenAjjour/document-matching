@@ -2,8 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86f7be83-7238-4f81-aa3a-9a7d2ad3a449" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/args-me-matching.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mylogging/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/validate_duplicate_ids.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/clean_args_me.sh" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/clean_args_me.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/add-argument-ids.py" beforeDir="false" afterPath="$PROJECT_DIR$/archive/add-argument-ids.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/generate_args_me.py" beforeDir="false" afterPath="$PROJECT_DIR$/archive/generate_args_me.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/preprocess_args_me.py" beforeDir="false" afterPath="$PROJECT_DIR$/archive/preprocess_args_me.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/search_and_save_matches.py" beforeDir="false" afterPath="$PROJECT_DIR$/archive/search_and_save_matches.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/args-me-local.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/conf/args-me-local.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/args-me.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/conf/args-me.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/conf/configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/drop-duplicates-hash.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/drop-duplicates-hash.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/drop-duplicates-ids-text.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/drop-duplicates-ids.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/drop-duplicates-ids.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mylogging/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/conf/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mylogging/mylogging.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/mylogging/mylogging.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/preprocessing/preprocess_args_me.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/preprocessing/preprocess_args_me.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runs/run_clean_hash.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/runs/run_clean_hash.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runs/run_clean_ids.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/runs/run_clean_ids.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,10 +106,11 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576000420187" />
     <property name="jdk.selected.JAVA_MODULE" value="15" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/conf" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
@@ -105,13 +123,14 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/preprocessing" />
       <recent name="$PROJECT_DIR$/archive/conf" />
       <recent name="$PROJECT_DIR$/archive" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.run_clean_ids">
+  <component name="RunManager" selected="Python.validate_duplicate_ids">
     <configuration name="preprocess_args_me (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="args-me-matching" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -121,27 +140,6 @@
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/preprocessing" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/preprocessing/preprocess_args_me.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="preprocess_args_me" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="args-me-matching" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -238,7 +236,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="save_duplicates" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="validate_duplicate_ids" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="args-me-matching" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -246,11 +244,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/runs" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/runs/save_duplicates.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/test/validate_duplicate_ids.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -262,18 +260,18 @@
     <list>
       <item itemvalue="Python.preprocess_args_me" />
       <item itemvalue="Python.run_clean_ids" />
-      <item itemvalue="Python.save_duplicates" />
       <item itemvalue="Python.run_print_arguments" />
       <item itemvalue="Python.preprocess_args_me (1)" />
       <item itemvalue="Python.run_clean_hash" />
+      <item itemvalue="Python.validate_duplicate_ids" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.validate_duplicate_ids" />
         <item itemvalue="Python.run_clean_ids" />
         <item itemvalue="Python.run_clean_hash" />
         <item itemvalue="Python.preprocess_args_me (1)" />
         <item itemvalue="Python.run_print_arguments" />
-        <item itemvalue="Python.save_duplicates" />
       </list>
     </recent_temporary>
   </component>
@@ -380,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619013172293</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fixing deployment">
+      <created>1619013429070</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1619013429070</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -443,7 +448,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/archive/search_and_save_matches.py</url>
-          <line>49</line>
+          <line>48</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -453,7 +458,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/archive/generate_args_me.py</url>
-          <line>5</line>
+          <line>4</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -462,24 +467,14 @@
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/duplicates/duplicates.py</url>
-          <line>38</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/duplicates/duplicates.py</url>
-          <line>66</line>
-          <option name="timeStamp" value="28" />
+          <url>file://$PROJECT_DIR$/src/preprocessing/preprocess_args_me.py</url>
+          <line>53</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/preprocessing/preprocess_args_me.py</url>
-          <line>46</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/duplicates/duplicates.py</url>
-          <line>60</line>
-          <option name="timeStamp" value="31" />
+          <line>59</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
